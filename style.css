@@ -4,16 +4,18 @@ padding:0;
 box-sizing:border-box;
 }
 
-body{
+/* Background toàn màn hình */
 
-font-family:'Be Vietnam Pro',sans-serif;
+body{
 
 height:100vh;
 
-background-image:url("bg.jpg");
+font-family:'Be Vietnam Pro',sans-serif;
 
+background-image:url("bg.jpg");
 background-size:cover;
 background-position:center;
+background-repeat:no-repeat;
 
 display:flex;
 justify-content:center;
@@ -21,17 +23,24 @@ align-items:center;
 
 color:white;
 
+overflow:hidden;
+
 }
+
+/* Lớp làm tối ảnh để chữ dễ đọc */
 
 .overlay{
 
 position:absolute;
+
 width:100%;
 height:100%;
 
 background:rgba(0,0,0,0.45);
 
 }
+
+/* Khung nội dung */
 
 .container{
 
@@ -49,27 +58,39 @@ text-align:center;
 
 width:500px;
 
+max-width:90%;
+
 }
+
+/* Tiêu đề */
 
 h1{
 
 margin-bottom:20px;
+
 font-size:32px;
 
 }
 
+/* Nội dung confession */
+
 .text{
 
 line-height:1.8;
+
 margin-bottom:25px;
 
 }
+
+/* Câu hỏi */
 
 h2{
 
 margin-bottom:30px;
 
 }
+
+/* Button chung */
 
 button{
 
@@ -87,24 +108,33 @@ transition:0.3s;
 
 }
 
+/* Hover button */
+
 button:hover{
 
 transform:scale(1.1);
 
 }
 
+/* Nút mở thư */
+
 .openBtn{
 
 background:#ff4d6d;
+
 color:white;
 
 }
+
+/* Container YES NO */
 
 .buttons{
 
 position:relative;
 
 }
+
+/* Nút YES */
 
 #yesBtn{
 
@@ -120,11 +150,15 @@ margin-right:15px;
 
 }
 
+/* Nút NO */
+
 #noBtn{
 
 background:#ccc;
 
 }
+
+/* Ẩn phần */
 
 .hidden{
 
@@ -132,15 +166,20 @@ display:none;
 
 }
 
+/* Canvas pháo hoa */
+
 #fireworks{
 
 position:fixed;
-left:0;
-top:0;
 
-width:100%;
-height:100%;
+top:0;
+left:0;
+
+width:100vw;
+height:100vh;
 
 pointer-events:none;
+
+z-index:999;
 
 }
