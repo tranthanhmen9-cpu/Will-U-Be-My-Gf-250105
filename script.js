@@ -1,18 +1,28 @@
-const passwordBtn=document.getElementById("passwordBtn")
-const openLetterBtn=document.getElementById("openLetterBtn")
+const passwordInput=document.getElementById("passwordInput")
 
-const yesBtn=document.getElementById("yesBtn")
-const noBtn=document.getElementById("noBtn")
+const openLetter=document.getElementById("openLetter")
 
-passwordBtn.onclick=function(){
+const yes=document.getElementById("yes")
 
-let password=document.getElementById("passwordInput").value
+const no=document.getElementById("no")
 
-if(password==="250105"){
+function showPage(id){
 
-document.getElementById("passwordPage").classList.add("hidden")
+document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"))
 
-document.getElementById("letterPage").classList.remove("hidden")
+document.getElementById(id).classList.add("active")
+
+}
+
+
+
+passwordInput.addEventListener("keypress",function(e){
+
+if(e.key==="Enter"){
+
+if(passwordInput.value==="250105"){
+
+showPage("letterPage")
 
 }else{
 
@@ -22,38 +32,37 @@ document.getElementById("error").innerText="Sai mật khẩu 😢"
 
 }
 
+})
 
 
-openLetterBtn.onclick=function(){
 
-document.getElementById("letterPage").classList.add("hidden")
+openLetter.onclick=function(){
 
-document.getElementById("confessionPage").classList.remove("hidden")
+showPage("confessionPage")
 
 }
 
 
 
-noBtn.onmouseover=function(){
+no.onmouseover=function(){
 
 let x=Math.random()*300
+
 let y=Math.random()*200
 
-noBtn.style.position="absolute"
+no.style.position="absolute"
 
-noBtn.style.left=x+"px"
+no.style.left=x+"px"
 
-noBtn.style.top=y+"px"
+no.style.top=y+"px"
 
 }
 
 
 
-yesBtn.onclick=function(){
+yes.onclick=function(){
 
-document.getElementById("confessionPage").classList.add("hidden")
-
-document.getElementById("successPage").classList.remove("hidden")
+showPage("successPage")
 
 startFireworks()
 
@@ -103,6 +112,7 @@ createFirework()
 particles.forEach(p=>{
 
 ctx.beginPath()
+
 ctx.arc(p.x,p.y,3,0,Math.PI*2)
 
 ctx.fillStyle="gold"
