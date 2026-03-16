@@ -16,26 +16,39 @@
 
 <body>
 
-<div class="overlay"></div>
+<div class="bg"></div>
 
-<div class="container">
+<div class="card" id="passwordPage">
 
-<input type="checkbox" id="openLetter">
+<h1>🔒 Mở bức thư bí mật</h1>
 
-<div class="letterBox">
+<p>Gợi ý: ngày sinh của chúng ta</p>
 
-<h1>💌 Em có một lá thư</h1>
+<input id="passwordInput" type="password" placeholder="Nhập mật khẩu">
 
-<label for="openLetter" class="openBtn">
-Mở thư
-</label>
+<button id="passwordBtn">Xác nhận</button>
+
+<p id="error"></p>
 
 </div>
 
 
-<div class="confessionBox">
 
-<p>
+<div class="card hidden" id="letterPage">
+
+<h1>💌 Em có một lá thư</h1>
+
+<p>Bấm để mở thư</p>
+
+<button id="openLetterBtn">Mở thư</button>
+
+</div>
+
+
+
+<div class="card hidden" id="confessionPage">
+
+<p class="text">
 
 Anh đã suy nghĩ rất lâu trước khi viết những dòng này.
 
@@ -43,7 +56,7 @@ Từ lúc gặp em, mọi thứ dường như trở nên nhẹ nhàng hơn.
 
 Anh thích cách em cười  
 cách em nói chuyện  
-và cả những điều nhỏ nhặt nhất khi ở cạnh em.
+và cả những điều nhỏ nhặt khi ở cạnh em.
 
 </p>
 
@@ -59,13 +72,12 @@ và cả những điều nhỏ nhặt nhất khi ở cạnh em.
 </div>
 
 
-<div id="successBox">
 
-<h1>🎉 Em đã đồng ý!</h1>
+<div class="card hidden" id="successPage">
 
-<p>Chúng ta chính thức là một đôi rồi 💖</p>
+<h1>🎉 She said YES!</h1>
 
-</div>
+<p>Từ bây giờ chúng ta chính thức là một đôi 💖</p>
 
 </div>
 
@@ -74,5 +86,4 @@ và cả những điều nhỏ nhặt nhất khi ở cạnh em.
 <script src="script.js"></script>
 
 </body>
-
 </html>
