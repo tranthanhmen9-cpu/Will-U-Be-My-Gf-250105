@@ -20,7 +20,30 @@
 
 <div class="container">
 
-<div id="letterBox">
+<!-- PASSWORD -->
+
+<div id="passwordBox">
+
+<h1>🔒 Nhập mật khẩu để mở thư</h1>
+
+<p>
+Gợi ý: ngày sinh của chúng ta
+</p>
+
+<input type="password" id="passwordInput" placeholder="Nhập mật khẩu">
+
+<br><br>
+
+<button onclick="checkPassword()">Mở thư</button>
+
+<p id="errorText"></p>
+
+</div>
+
+
+<!-- LETTER -->
+
+<div id="letterBox" class="hidden">
 
 <h1>💌 Em có một lá thư</h1>
 
@@ -29,6 +52,9 @@ Mở thư
 </button>
 
 </div>
+
+
+<!-- CONFESSION -->
 
 <div id="confessionBox" class="hidden">
 
@@ -48,9 +74,7 @@ Nhưng có một điều anh chắc chắn...
 
 </p>
 
-<h2>
-Em có đồng ý làm người yêu anh không?
-</h2>
+<h2>Em có đồng ý làm người yêu anh không?</h2>
 
 <div class="buttons">
 
@@ -61,13 +85,14 @@ Em có đồng ý làm người yêu anh không?
 
 </div>
 
+
+<!-- SUCCESS -->
+
 <div id="successBox" class="hidden">
 
 <h1>🎉 Em đã đồng ý!</h1>
 
-<p>
-Từ bây giờ chúng ta chính thức là một đôi rồi 💖
-</p>
+<p>Từ bây giờ chúng ta chính thức là một đôi rồi 💖</p>
 
 </div>
 
