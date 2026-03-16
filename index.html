@@ -10,43 +10,43 @@
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<div class="bg"></div>
+<div class="overlay"></div>
 
-<div class="card" id="passwordPage">
+<!-- PASSWORD PAGE -->
+
+<div class="page active" id="passwordPage">
 
 <h1>🔒 Mở bức thư bí mật</h1>
 
-<p>Gợi ý: ngày sinh của chúng ta</p>
+<p>Nhập mật khẩu rồi nhấn Enter</p>
 
-<input id="passwordInput" type="password" placeholder="Nhập mật khẩu">
-
-<button id="passwordBtn">Xác nhận</button>
+<input id="passwordInput" type="password" placeholder="Mật khẩu">
 
 <p id="error"></p>
 
 </div>
 
 
+<!-- LETTER PAGE -->
 
-<div class="card hidden" id="letterPage">
+<div class="page" id="letterPage">
 
 <h1>💌 Em có một lá thư</h1>
 
-<p>Bấm để mở thư</p>
-
-<button id="openLetterBtn">Mở thư</button>
+<button id="openLetter">Mở thư</button>
 
 </div>
 
 
+<!-- CONFESSION -->
 
-<div class="card hidden" id="confessionPage">
+<div class="page" id="confessionPage">
 
 <p class="text">
 
@@ -54,8 +54,8 @@ Anh đã suy nghĩ rất lâu trước khi viết những dòng này.
 
 Từ lúc gặp em, mọi thứ dường như trở nên nhẹ nhàng hơn.
 
-Anh thích cách em cười  
-cách em nói chuyện  
+Anh thích cách em cười,  
+cách em nói chuyện,  
 và cả những điều nhỏ nhặt khi ở cạnh em.
 
 </p>
@@ -64,16 +64,17 @@ và cả những điều nhỏ nhặt khi ở cạnh em.
 
 <div class="buttons">
 
-<button id="yesBtn">YES</button>
-<button id="noBtn">NO</button>
+<button id="yes">YES</button>
+<button id="no">NO</button>
 
 </div>
 
 </div>
 
 
+<!-- SUCCESS -->
 
-<div class="card hidden" id="successPage">
+<div class="page" id="successPage">
 
 <h1>🎉 She said YES!</h1>
 
@@ -81,9 +82,11 @@ và cả những điều nhỏ nhặt khi ở cạnh em.
 
 </div>
 
+
 <canvas id="fireworks"></canvas>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
