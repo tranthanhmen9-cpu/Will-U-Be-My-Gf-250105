@@ -24,7 +24,7 @@ showPage("letterPage")
 
 }else{
 
-document.getElementById("error").innerText="Sai mật khẩu 😢"
+document.getElementById("error").innerText="Sai mật khẩu 😡"
 
 }
 
