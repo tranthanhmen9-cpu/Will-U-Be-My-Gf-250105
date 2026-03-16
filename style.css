@@ -1,103 +1,175 @@
-<!DOCTYPE html>
-<html lang="vi">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-<head>
+body{
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+height:100vh;
 
-<title>WILL U BE MY GF 250105</title>
+font-family:'Be Vietnam Pro',sans-serif;
 
-<link rel="stylesheet" href="style.css">
+display:flex;
+justify-content:center;
+align-items:center;
 
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
+background:url("bg.jpg") center/cover no-repeat;
 
-</head>
+color:white;
 
-<body>
+overflow:hidden;
 
-<div class="overlay"></div>
+}
 
-<!-- PASSWORD PAGE -->
+.overlay{
 
-<div class="page active" id="passwordPage">
+position:fixed;
+top:0;
+left:0;
 
-<h1>🔒 Mở bức thư bí mật</h1>
+width:100%;
+height:100%;
 
-<p>Nhập mật khẩu rồi nhấn Enter</p>
+background:rgba(0,0,0,0.55);
 
-<input id="passwordInput" type="password" placeholder="Nhập mật khẩu">
+pointer-events:none;
 
-<p class="hint">💡 Gợi ý: ngày sinh của 2 đứa</p>
+}
 
-<p id="error"></p>
+.page{
 
-</div>
+position:absolute;
 
+width:420px;
 
-<!-- LETTER PAGE -->
+padding:40px;
 
-<div class="page" id="letterPage">
+text-align:center;
 
-<h1>💌 Em có một lá thư</h1>
+background:rgba(255,255,255,0.12);
 
-<p>
-Anh đã viết những dòng này khá lâu rồi,<br>
-nhưng hôm nay mới đủ can đảm để đưa cho em.
-</p>
+backdrop-filter:blur(12px);
 
-<p>Bấm nút dưới đây để mở nhé.</p>
+border-radius:20px;
 
-<button id="openLetter">Mở thư</button>
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 
-</div>
+display:none;
 
+}
 
-<!-- CONFESSION PAGE -->
+.page.active{
+display:block;
+}
 
-<div class="page" id="confessionPage">
+h1{
+margin-bottom:15px;
+}
 
-<p class="text">
+h2{
+margin-top:20px;
+}
 
-Anh đã suy nghĩ rất lâu trước khi viết những dòng này.
+p{
+line-height:1.6;
+margin-top:10px;
+}
 
-Từ lúc gặp em, mọi thứ dường như trở nên nhẹ nhàng hơn.
-Anh thích cách em cười, cách em nói chuyện
-và cả những điều nhỏ nhặt khi ở cạnh em.
+.text{
+margin-top:10px;
+}
 
-Có thể anh không phải là người hoàn hảo,
-nhưng anh thật sự muốn được ở bên cạnh em,
-được quan tâm em và cùng em đi qua nhiều điều trong cuộc sống.
+input{
 
-</p>
+margin-top:15px;
 
-<h2>Em có đồng ý làm người yêu anh không?</h2>
+padding:12px;
 
-<div class="buttons">
+width:220px;
 
-<button id="yes">YES</button>
-<button id="no">NO</button>
+border-radius:8px;
 
-</div>
+border:none;
 
-</div>
+font-size:16px;
 
+text-align:center;
 
-<!-- SUCCESS PAGE -->
+}
 
-<div class="page" id="successPage">
+button{
 
-<h1>🎉 She said YES!</h1>
+margin-top:20px;
 
-<p>Từ bây giờ chúng ta chính thức là một đôi 💖</p>
+padding:12px 24px;
 
-</div>
+border:none;
 
+border-radius:10px;
 
-<canvas id="fireworks"></canvas>
+font-size:18px;
 
-<script src="script.js"></script>
+cursor:pointer;
 
-</body>
+transition:0.2s;
 
-</html>
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#yes{
+
+font-size:26px;
+
+background:#ff4d6d;
+
+color:white;
+
+}
+
+#no{
+
+background:#ddd;
+
+}
+
+.buttons{
+margin-top:20px;
+}
+
+.hint{
+
+margin-top:10px;
+
+font-size:14px;
+
+opacity:0.8;
+
+font-style:italic;
+
+}
+
+#error{
+
+margin-top:10px;
+
+color:#ff9c9c;
+
+}
+
+#fireworks{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+}
