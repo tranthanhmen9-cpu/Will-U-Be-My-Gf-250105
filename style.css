@@ -6,101 +6,89 @@ box-sizing:border-box;
 
 body{
 
-font-family:'Be Vietnam Pro',sans-serif;
-
 height:100vh;
+
+font-family:'Be Vietnam Pro',sans-serif;
 
 display:flex;
 justify-content:center;
 align-items:center;
 
-overflow:hidden;
+background:url("bg.jpg") center/cover no-repeat;
 
 color:white;
 
+overflow:hidden;
+
 }
 
-
-.bg{
+.overlay{
 
 position:fixed;
-
 width:100%;
 height:100%;
 
-background-image:url("bg.jpg");
+background:rgba(0,0,0,0.5);
 
-background-size:cover;
-background-position:center;
-
-filter:brightness(60%);
-
-z-index:-1;
+pointer-events:none;
 
 }
 
+.page{
 
-.card{
-
-width:420px;
-
-padding:40px;
-
-background:rgba(255,255,255,0.12);
-
-backdrop-filter:blur(12px);
-
-border-radius:20px;
+position:absolute;
 
 text-align:center;
 
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+background:rgba(255,255,255,0.1);
+
+backdrop-filter:blur(10px);
+
+padding:40px;
+
+border-radius:20px;
+
+width:400px;
+
+display:none;
 
 }
 
-
-h1{
-margin-bottom:15px;
-}
-
-p{
-margin-bottom:15px;
-line-height:1.6;
+.page.active{
+display:block;
 }
 
 input{
 
 padding:12px;
 
-width:220px;
-
-border-radius:8px;
+width:200px;
 
 border:none;
 
-margin-top:10px;
-
-}
-
-
-button{
+border-radius:8px;
 
 margin-top:15px;
 
-padding:12px 25px;
+}
+
+button{
+
+margin-top:20px;
+
+padding:12px 24px;
 
 border:none;
 
 border-radius:10px;
 
-font-size:16px;
+font-size:18px;
 
 cursor:pointer;
 
 }
 
-
-#yesBtn{
+#yes{
 
 font-size:26px;
 
@@ -110,27 +98,15 @@ color:white;
 
 }
 
+#no{
 
-#noBtn{
-
-background:#ccc;
+background:#ddd;
 
 }
-
 
 .buttons{
-
 margin-top:20px;
-
 }
-
-
-.hidden{
-
-display:none;
-
-}
-
 
 #fireworks{
 
