@@ -1,9 +1,6 @@
 const passwordInput = document.getElementById("passwordInput")
-
 const openLetter = document.getElementById("openLetter")
-
 const yes = document.getElementById("yes")
-
 const no = document.getElementById("no")
 
 function showPage(id){
@@ -17,7 +14,6 @@ document.getElementById(id).classList.add("active")
 }
 
 
-
 passwordInput.addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
@@ -28,7 +24,7 @@ showPage("letterPage")
 
 }else{
 
-document.getElementById("error").innerText="Sai mật khẩun😢"
+document.getElementById("error").innerText="Sai mật khẩu 😢"
 
 }
 
@@ -37,13 +33,11 @@ document.getElementById("error").innerText="Sai mật khẩun😢"
 })
 
 
-
 openLetter.onclick=function(){
 
 showPage("confessionPage")
 
 }
-
 
 
 no.onmouseover=function(){
@@ -54,11 +48,9 @@ let y=Math.random()*200
 no.style.position="absolute"
 
 no.style.left=x+"px"
-
 no.style.top=y+"px"
 
 }
-
 
 
 yes.onclick=function(){
@@ -70,11 +62,9 @@ startFireworks()
 }
 
 
-
 function startFireworks(){
 
 const canvas=document.getElementById("fireworks")
-
 const ctx=canvas.getContext("2d")
 
 canvas.width=window.innerWidth
@@ -113,11 +103,9 @@ createFirework()
 particles.forEach(p=>{
 
 ctx.beginPath()
-
 ctx.arc(p.x,p.y,3,0,Math.PI*2)
 
 ctx.fillStyle="gold"
-
 ctx.fill()
 
 p.x+=p.vx
