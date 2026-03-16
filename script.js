@@ -4,11 +4,15 @@ const openLetterBtn=document.getElementById("openLetterBtn")
 const yesBtn=document.getElementById("yesBtn")
 const noBtn=document.getElementById("noBtn")
 
+// PASSWORD
+
 passwordBtn.onclick=function(){
 
 let password=document.getElementById("passwordInput").value
 
-if(password==="250105"){
+let correctPassword="250105"
+
+if(password===correctPassword){
 
 document.getElementById("passwordPage").classList.add("hidden")
 
@@ -23,6 +27,7 @@ document.getElementById("error").innerText="Sai mật khẩu 😢"
 }
 
 
+// OPEN LETTER
 
 openLetterBtn.onclick=function(){
 
@@ -33,6 +38,7 @@ document.getElementById("confessionPage").classList.remove("hidden")
 }
 
 
+// NO BUTTON RUN
 
 noBtn.onmouseover=function(){
 
@@ -48,6 +54,7 @@ noBtn.style.top=y+"px"
 }
 
 
+// YES BUTTON
 
 yesBtn.onclick=function(){
 
@@ -60,6 +67,7 @@ startFireworks()
 }
 
 
+// FIREWORKS
 
 function startFireworks(){
 
