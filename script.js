@@ -1,14 +1,16 @@
-const passwordInput=document.getElementById("passwordInput")
+const passwordInput = document.getElementById("passwordInput")
 
-const openLetter=document.getElementById("openLetter")
+const openLetter = document.getElementById("openLetter")
 
-const yes=document.getElementById("yes")
+const yes = document.getElementById("yes")
 
-const no=document.getElementById("no")
+const no = document.getElementById("no")
 
 function showPage(id){
 
-document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"))
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active")
+})
 
 document.getElementById(id).classList.add("active")
 
@@ -20,7 +22,7 @@ passwordInput.addEventListener("keypress",function(e){
 
 if(e.key==="Enter"){
 
-if(passwordInput.value==="250105"){
+if(passwordInput.value==="250105310105"){
 
 showPage("letterPage")
 
@@ -47,7 +49,6 @@ showPage("confessionPage")
 no.onmouseover=function(){
 
 let x=Math.random()*300
-
 let y=Math.random()*200
 
 no.style.position="absolute"
