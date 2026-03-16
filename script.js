@@ -1,3 +1,22 @@
+function checkPassword(){
+
+let password=document.getElementById("passwordInput").value
+
+let correctPassword="2501200531012005"
+
+if(password===correctPassword){
+
+document.getElementById("passwordBox").style.display="none"
+
+document.getElementById("letterBox").classList.remove("hidden")
+
+}else{
+
+document.getElementById("errorText").innerText="Sai mật khẩu rồi 😢"
+
+}
+
+}
 function openLetter(){
 
 document.getElementById("letterBox").style.display="none"
