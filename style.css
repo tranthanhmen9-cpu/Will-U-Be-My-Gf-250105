@@ -4,8 +4,6 @@ padding:0;
 box-sizing:border-box;
 }
 
-/* Background toàn màn hình */
-
 body{
 
 height:100vh;
@@ -27,24 +25,27 @@ overflow:hidden;
 
 }
 
-/* Lớp làm tối ảnh để chữ dễ đọc */
-
 .overlay{
 
-position:absolute;
+position:fixed;
+
+top:0;
+left:0;
 
 width:100%;
 height:100%;
 
 background:rgba(0,0,0,0.45);
 
-}
+z-index:1;
 
-/* Khung nội dung */
+}
 
 .container{
 
 position:relative;
+
+z-index:2;
 
 background:rgba(255,255,255,0.1);
 
@@ -62,8 +63,6 @@ max-width:90%;
 
 }
 
-/* Tiêu đề */
-
 h1{
 
 margin-bottom:20px;
@@ -71,8 +70,6 @@ margin-bottom:20px;
 font-size:32px;
 
 }
-
-/* Nội dung confession */
 
 .text{
 
@@ -82,15 +79,11 @@ margin-bottom:25px;
 
 }
 
-/* Câu hỏi */
-
 h2{
 
 margin-bottom:30px;
 
 }
-
-/* Button chung */
 
 button{
 
@@ -108,15 +101,11 @@ transition:0.3s;
 
 }
 
-/* Hover button */
-
 button:hover{
 
 transform:scale(1.1);
 
 }
-
-/* Nút mở thư */
 
 .openBtn{
 
@@ -126,15 +115,11 @@ color:white;
 
 }
 
-/* Container YES NO */
-
 .buttons{
 
 position:relative;
 
 }
-
-/* Nút YES */
 
 #yesBtn{
 
@@ -150,23 +135,17 @@ margin-right:15px;
 
 }
 
-/* Nút NO */
-
 #noBtn{
 
 background:#ccc;
 
 }
 
-/* Ẩn phần */
-
 .hidden{
 
 display:none;
 
 }
-
-/* Canvas pháo hoa */
 
 #fireworks{
 
