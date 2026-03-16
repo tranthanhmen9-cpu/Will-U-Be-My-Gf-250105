@@ -1,10 +1,9 @@
-// kiểm tra mật khẩu
+document.addEventListener("DOMContentLoaded", function () {
 
 function checkPassword(){
 
 let password = document.getElementById("passwordInput").value
-
-let correctPassword = "2501200531012005"
+let correctPassword = "2501200510032005"
 
 if(password === correctPassword){
 
@@ -19,21 +18,19 @@ document.getElementById("errorText").innerText = "Sai mật khẩu rồi 😢"
 
 }
 
+window.checkPassword = checkPassword
 
-
-// mở thư
 
 function openLetter(){
 
 document.getElementById("letterBox").style.display = "none"
-
 document.getElementById("confessionBox").classList.remove("hidden")
 
 }
 
+window.openLetter = openLetter
 
 
-// nút NO chạy trốn
 
 const noBtn = document.getElementById("noBtn")
 
@@ -54,13 +51,11 @@ noBtn.style.top = y + "px"
 
 
 
-// nút YES
-
 const yesBtn = document.getElementById("yesBtn")
 
 if(yesBtn){
 
-yesBtn.onclick = function(){
+yesBtn.addEventListener("click", function(){
 
 document.getElementById("confessionBox").style.display = "none"
 
@@ -68,13 +63,11 @@ document.getElementById("successBox").classList.remove("hidden")
 
 startFireworks()
 
-}
+})
 
 }
 
 
-
-// pháo hoa
 
 function startFireworks(){
 
@@ -88,10 +81,10 @@ let particles = []
 
 function createFirework(){
 
-let x = Math.random() * canvas.width
-let y = Math.random() * canvas.height
+let x = Math.random()*canvas.width
+let y = Math.random()*canvas.height
 
-for(let i = 0; i < 80; i++){
+for(let i=0;i<80;i++){
 
 particles.push({
 
@@ -110,21 +103,21 @@ function animate(){
 
 ctx.clearRect(0,0,canvas.width,canvas.height)
 
-if(Math.random() < 0.05){
+if(Math.random()<0.05){
 
 createFirework()
 
 }
 
-particles.forEach(p => {
+particles.forEach(p=>{
 
 ctx.beginPath()
 ctx.arc(p.x,p.y,3,0,Math.PI*2)
 ctx.fillStyle="gold"
 ctx.fill()
 
-p.x += p.vx
-p.y += p.vy
+p.x+=p.vx
+p.y+=p.vy
 
 })
 
@@ -135,3 +128,5 @@ requestAnimationFrame(animate)
 animate()
 
 }
+
+})
