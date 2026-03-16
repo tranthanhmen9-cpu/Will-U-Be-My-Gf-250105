@@ -4,7 +4,7 @@ function checkPassword(){
 
 let password = document.getElementById("passwordInput").value
 
-let correctPassword = "2501200510032005"
+let correctPassword = "2501200531012005"
 
 if(password === correctPassword){
 
