@@ -161,4 +161,26 @@ pointer-events:none;
 
 z-index:999;
 
+input{
+
+padding:12px;
+
+border-radius:8px;
+
+border:none;
+
+font-size:16px;
+
+width:200px;
+
+text-align:center;
+
+}
+
+#errorText{
+
+color:#ffb3b3;
+
+margin-top:10px;
+
 }
