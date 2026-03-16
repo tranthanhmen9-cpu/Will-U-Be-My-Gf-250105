@@ -55,6 +55,42 @@ z-index:2;
 
 }
 
+.openBtn{
+
+display:inline-block;
+
+padding:12px 25px;
+
+background:#ff4d6d;
+
+border-radius:10px;
+
+cursor:pointer;
+
+margin-top:20px;
+
+}
+
+.confessionBox{
+
+display:none;
+
+margin-top:20px;
+
+}
+
+#openLetter{
+display:none;
+}
+
+#openLetter:checked ~ .letterBox{
+display:none;
+}
+
+#openLetter:checked ~ .confessionBox{
+display:block;
+}
+
 button{
 
 padding:12px 25px;
@@ -82,15 +118,11 @@ color:white;
 }
 
 #noBtn{
-
 background:#ccc;
-
 }
 
-.hidden{
-
+#successBox{
 display:none;
-
 }
 
 #fireworks{
