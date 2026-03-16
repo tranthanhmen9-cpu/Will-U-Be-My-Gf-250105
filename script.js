@@ -1,35 +1,13 @@
-window.onload = function(){
+const yesBtn=document.getElementById("yesBtn")
+const noBtn=document.getElementById("noBtn")
 
-const passwordBtn = document.getElementById("passwordBtn")
-const openLetterBtn = document.getElementById("openLetterBtn")
-const yesBtn = document.getElementById("yesBtn")
-const noBtn = document.getElementById("noBtn")
+yesBtn.onclick=function(){
 
-passwordBtn.onclick = function(){
+document.getElementById("successBox").style.display="block"
 
-let password = document.getElementById("passwordInput").value
-
-if(password === "123456"){
-
-document.getElementById("passwordBox").style.display="none"
-document.getElementById("letterBox").classList.remove("hidden")
-
-}else{
-
-document.getElementById("errorText").innerText="Sai mật khẩu"
+startFireworks()
 
 }
-
-}
-
-
-openLetterBtn.onclick = function(){
-
-document.getElementById("letterBox").style.display="none"
-document.getElementById("confessionBox").classList.remove("hidden")
-
-}
-
 
 noBtn.onmouseover=function(){
 
@@ -43,11 +21,60 @@ noBtn.style.top=y+"px"
 }
 
 
-yesBtn.onclick=function(){
+function startFireworks(){
 
-document.getElementById("confessionBox").style.display="none"
-document.getElementById("successBox").classList.remove("hidden")
+const canvas=document.getElementById("fireworks")
+const ctx=canvas.getContext("2d")
+
+canvas.width=window.innerWidth
+canvas.height=window.innerHeight
+
+let particles=[]
+
+function createFirework(){
+
+let x=Math.random()*canvas.width
+let y=Math.random()*canvas.height
+
+for(let i=0;i<80;i++){
+
+particles.push({
+
+x:x,
+y:y,
+vx:(Math.random()-0.5)*8,
+vy:(Math.random()-0.5)*8
+
+})
 
 }
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height)
+
+if(Math.random()<0.05){
+createFirework()
+}
+
+particles.forEach(p=>{
+
+ctx.beginPath()
+ctx.arc(p.x,p.y,3,0,Math.PI*2)
+ctx.fillStyle="gold"
+ctx.fill()
+
+p.x+=p.vx
+p.y+=p.vy
+
+})
+
+requestAnimationFrame(animate)
+
+}
+
+animate()
 
 }
