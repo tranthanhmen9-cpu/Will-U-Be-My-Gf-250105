@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
 
 <meta charset="UTF-8">
@@ -19,40 +20,29 @@
 
 <div class="container">
 
-<div id="passwordBox">
+<input type="checkbox" id="openLetter">
 
-<h1>🔒 Nhập mật khẩu để mở thư</h1>
-
-<input type="password" id="passwordInput" placeholder="Nhập mật khẩu">
-
-<br><br>
-
-<button id="passwordBtn">Mở thư</button>
-
-<p id="errorText"></p>
-
-</div>
-
-
-<div id="letterBox" class="hidden">
+<div class="letterBox">
 
 <h1>💌 Em có một lá thư</h1>
 
-<button id="openLetterBtn">Mở thư</button>
+<label for="openLetter" class="openBtn">
+Mở thư
+</label>
 
 </div>
 
 
-<div id="confessionBox" class="hidden">
+<div class="confessionBox">
 
-<p class="text">
+<p>
 
 Anh đã suy nghĩ rất lâu trước khi viết những dòng này.
 
 Từ lúc gặp em, mọi thứ dường như trở nên nhẹ nhàng hơn.
 
-Anh thích cách em cười,
-cách em nói chuyện,
+Anh thích cách em cười  
+cách em nói chuyện  
 và cả những điều nhỏ nhặt nhất khi ở cạnh em.
 
 </p>
@@ -69,7 +59,7 @@ và cả những điều nhỏ nhặt nhất khi ở cạnh em.
 </div>
 
 
-<div id="successBox" class="hidden">
+<div id="successBox">
 
 <h1>🎉 Em đã đồng ý!</h1>
 
@@ -84,4 +74,5 @@ và cả những điều nhỏ nhặt nhất khi ở cạnh em.
 <script src="script.js"></script>
 
 </body>
+
 </html>
